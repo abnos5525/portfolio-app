@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/portfolio-app/static/js/main.f9754b05.js",
+    "main.js": "/portfolio-app/static/js/main.14be37ed.js",
     "static/media/avatar.jpg": "/portfolio-app/static/media/avatar.c93b0bdb661a76fbbce0.jpg",
     "index.html": "/portfolio-app/index.html",
-    "main.f9754b05.js.map": "/portfolio-app/static/js/main.f9754b05.js.map"
+    "main.14be37ed.js.map": "/portfolio-app/static/js/main.14be37ed.js.map"
   },
   "entrypoints": [
-    "static/js/main.f9754b05.js"
+    "static/js/main.14be37ed.js"
   ]
 }
