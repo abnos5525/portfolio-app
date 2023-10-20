@@ -23,7 +23,7 @@ const AboutMe = () =>{
         <Grid container sx={{zIndex:3}}>
 
             <Grid xs={12} sm={12} md={5} lg={4} xl={4} sx={{mx:2,
-                mt:3, zIndex:3
+                mt:-15, zIndex:3
             }}>
                 <Particles options={collisions} init={particlesInit} loaded={particlesLoaded}/>
 
