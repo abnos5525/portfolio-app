@@ -49,11 +49,11 @@ const MainPage = () =>{
             <Box component="div" flexDirection="column" sx={{display:"flex",justifyContent:"center",textAlign:"center",
                     position:"relative",alignItems:"center",height:"100vh",
                         top:{
-                            xl:20,
-                            lg:20,
-                            md:5,
-                            sm:5,
-                            xs:5
+                            xl:10,
+                            lg:10,
+                            md:-5,
+                            sm:-5,
+                            xs:-5
                         } }}>
                 <Particle option={links} init={particlesInit} loaded={particlesLoaded}/>
 
@@ -88,10 +88,10 @@ const MainPage = () =>{
                             </Typography>
 
                     <Box sx={{display:"flex",mt:2,color:"primary.light"}}>
-                        <Typography sx={{mr:1,fontSize:25}}> من یک </Typography>
+                        <Typography sx={{mr:1,fontSize:20}}> من یک </Typography>
 
                         <TextTransition springConfig={presets.wobbly}>
-                            <Typography sx={{fontSize:25}}>
+                            <Typography sx={{fontSize:20}}>
                             {TEXTS[index % TEXTS.length]}
                             </Typography>
                         </TextTransition>
