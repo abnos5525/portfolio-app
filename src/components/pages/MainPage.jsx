@@ -49,30 +49,18 @@ const MainPage = () =>{
             <Box component="div" flexDirection="column" sx={{display:"flex",justifyContent:"center",textAlign:"center",
                     position:"relative",alignItems:"center",height:"100vh",
                         top:{
-                            xl:10,
-                            lg:10,
-                            md:-5,
-                            sm:-5,
-                            xs:-5
+                            xl:5,
+                            lg:5,
+                            md:-30,
+                            sm:-60,
+                            xs:-60
                         } }}>
                 <Particle option={links} init={particlesInit} loaded={particlesLoaded}/>
 
                         <Avatar src={avatar} sx={{
                             m:"0 auto",
-                            width:{
-                                xl:"15rem",
-                                lg:"15rem",
-                                md:"15rem",
-                                sm:"12rem",
-                                xs:"15rem",
-                            },
-                            height:{
-                                xl:"15rem",
-                                lg:"15rem",
-                                md:"15rem",
-                                sm:"12rem",
-                                xs:"15rem",
-                            }
+                            width:"15rem",
+                            height:"15rem"
                         }}>
                             HH
                         </Avatar>
