@@ -79,7 +79,7 @@ export const links = {
 
 export const collisions = {
         backgroundMode: {
-            enable: true,
+            enable: false,
             zIndex: 0
         },
         particles: {

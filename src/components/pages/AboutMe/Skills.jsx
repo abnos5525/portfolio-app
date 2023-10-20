@@ -55,20 +55,20 @@ const Skills = () =>{
     return(
         <Grid spacing={2} xs={12} sm={12} md={5} lg={6} xl={6} sx={{mx:5,
             my:{
-                xs:3,
-                sm:3,
+                xs:10,
+                sm:10,
                 md:2,
                 lg:2,
-                xl:2
-            },display:"flex"
+                xl:3
+            },display:"flex",zIndex:2
         }}>
-            <Grid xs={6}>
+            <Grid xs={6} sx={{zIndex:2}}>
                 <Skill dividerAlign="right" color="secondary" label="Html" value={html}/>
                 <Skill dividerAlign="left" color="info" label="Css" value={css}/>
                 <Skill dividerAlign="right" color="warning" label="JavaScript" value={javaScript}/>
                 <Skill dividerAlign="left" color="error" label="git" value={git}/>
             </Grid>
-            <Grid xs={6} sx={{ml:6}}>
+            <Grid xs={6} sx={{ml:6,zIndex:2}}>
                 <Skill dividerAlign="left" color="info" label="ReactJs" value={reactJs}/>
                 <Skill dividerAlign="right" color="success" label="Python" value={python}/>
                 <Skill dividerAlign="left" color="warning" label="Java" value={java}/>

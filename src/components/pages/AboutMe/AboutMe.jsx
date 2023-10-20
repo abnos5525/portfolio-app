@@ -19,8 +19,9 @@ const AboutMe = () =>{
         await console.log(container);
     }, []);
     return(
-        <Grid container>
-            <Particles id="tsparticles" options={collisions} init={particlesInit} loaded={particlesLoaded}/>
+
+        <Grid container sx={{zIndex:3}}>
+
             <Grid xs={12} sm={12} md={5} lg={4} xl={4} sx={{mx:2,
                 mt:{
                     xs:8,
@@ -28,8 +29,10 @@ const AboutMe = () =>{
                     md:2,
                     lg:2,
                     xl:2
-                },zIndex:5
+                }, zIndex:3
             }}>
+                <Particles options={collisions} init={particlesInit} loaded={particlesLoaded}/>
+
                 {info.map((i,index)=>(
                     <Card key={index} sx={{mb:2, bgcolor:"primary.about"}}>
                         <Box sx={{display:"flex", flexDirection:"column"}}>
@@ -59,8 +62,8 @@ const AboutMe = () =>{
                     </Card>
                 ))}
 
-            </Grid>
 
+            </Grid>
 
                 <Skills/>
 

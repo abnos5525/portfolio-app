@@ -6,7 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Typed from "typed.js";
 import {loadFull} from "tsparticles";
 import {Amoung} from "../../constants/particles";
-import Particles from "react-particles";
+import Particle from "./Particle";
 const Contact = () =>{
 
     const amoungParticle = Amoung()
@@ -41,9 +41,11 @@ const Contact = () =>{
         await console.log(container);
     }, []);
     return(
-        <Box component="div" sx={{textAlign:"center",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",height:"88vh",zIndex:2}}>
+        <Box component="div" sx={{textAlign:"center",display:"flex",
+            justifyContent:"center",alignItems:"center",flexDirection:"column",
+            height:"70vh", mb:20}}>
 
-            <Particles id="tsparticles" options={amoungParticle} init={particlesInit} loaded={particlesLoaded}/>
+            <Particle option={amoungParticle} init={particlesInit} loaded={particlesLoaded}/>
 
             <Typography ref={nameRef} variant="h3" sx={{my:3,color:"primary.light",zIndex:3}}></Typography>
 

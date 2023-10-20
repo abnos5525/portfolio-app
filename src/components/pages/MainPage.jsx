@@ -4,8 +4,8 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import Typed from "typed.js";
 import TextTransition, { presets } from 'react-text-transition';
 import {loadFull} from "tsparticles";
-import Particles from "react-particles";
 import {links} from "../../constants/particles"
+import Particle from "./Particle";
 const MainPage = () =>{
 
     const nameRef = useRef(null);
@@ -51,11 +51,12 @@ const MainPage = () =>{
                         top:{
                             xl:20,
                             lg:20,
-                            md:20,
-                            sm:200,
-                            xs:200
+                            md:5,
+                            sm:5,
+                            xs:5
                         } }}>
-                    <Particles sx={{zIndex:1}} id="tsparticles" options={links} init={particlesInit} loaded={particlesLoaded}/>
+                <Particle option={links} init={particlesInit} loaded={particlesLoaded}/>
+
                         <Avatar src={avatar} sx={{
                             m:"0 auto",
                             width:{
@@ -86,12 +87,13 @@ const MainPage = () =>{
 
                             </Typography>
 
-                    <Box sx={{display:"flex",mt:2,color:"primary.light",
-                        fontSize:25}}>
-                        <Typography sx={{mr:1}}> من یک </Typography>
+                    <Box sx={{display:"flex",mt:2,color:"primary.light"}}>
+                        <Typography sx={{mr:1,fontSize:25}}> من یک </Typography>
 
                         <TextTransition springConfig={presets.wobbly}>
+                            <Typography sx={{fontSize:25}}>
                             {TEXTS[index % TEXTS.length]}
+                            </Typography>
                         </TextTransition>
                     </Box>
 

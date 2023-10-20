@@ -45,7 +45,7 @@ const App=()=> {
         handleThemeChange
       }}>
         <MainTemplate mode={mode}>
-          <Grid container sx={{height:"100vh",bgcolor:"primary.main",overflowY:"auto",overflowX:"disable"}}>
+          <Grid container sx={{height:"100vh",bgcolor:"primary.main",overflowY:"auto"}}>
             <DrawerActionButton/>
             <SideBar/>
             <Header/>
