@@ -54,13 +54,7 @@ const Skills = () =>{
     }, []);
     return(
         <Grid spacing={2} xs={12} sm={12} md={5} lg={6} xl={6} sx={{mx:5,
-            my:{
-                xs:4,
-                sm:4,
-                md:3,
-                lg:3,
-                xl:3
-            },display:"flex",zIndex:2
+            mt:1,mb:8,display:"flex",zIndex:2
         }}>
             <Grid xs={6} sx={{zIndex:2}}>
                 <Skill dividerAlign="right" color="secondary" label="Html" value={html}/>

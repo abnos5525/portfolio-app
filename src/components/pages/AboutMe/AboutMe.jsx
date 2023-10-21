@@ -16,7 +16,7 @@ const AboutMe = () =>{
             }}>
 
                 {info.map((i,index)=>(
-                    <Card key={index} sx={{ bgcolor:"primary.about"}}>
+                    <Card key={index} sx={{ bgcolor:"primary.about",mb:1}}>
                         <Box sx={{display:"flex", flexDirection:"column"}}>
                             <CardContent>
                                 <Box sx={{display:"flex"}}>
