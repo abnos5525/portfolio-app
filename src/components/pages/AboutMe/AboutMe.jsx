@@ -2,30 +2,18 @@ import Grid from "@mui/material/Unstable_Grid2";
 import {Box, Card, CardContent, Chip, Typography} from "@mui/material";
 import {DevInfo} from "../../../constants/DevInfo";
 import Skills from "./Skills";
-import {useCallback} from "react";
-import {loadFull} from "tsparticles";
-import {collisions} from "../../../constants/particles";
-import Particles from "react-particles";
 
 const AboutMe = () =>{
 
     const info = DevInfo()
 
-    const particlesInit = useCallback(async engine => {
-        await loadFull(engine);
-    }, []);
-
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
     return(
 
-        <Grid container sx={{zIndex:3}}>
+        <Grid container sx={{zIndex:2}}>
 
             <Grid xs={12} sm={12} md={5} lg={4} xl={4} sx={{mx:2,
-                mt:-5, zIndex:3
+                mt:6, zIndex:2
             }}>
-                <Particles options={collisions} init={particlesInit} loaded={particlesLoaded}/>
 
                 {info.map((i,index)=>(
                     <Card key={index} sx={{mb:2, bgcolor:"primary.about"}}>

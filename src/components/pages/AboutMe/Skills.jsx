@@ -55,10 +55,10 @@ const Skills = () =>{
     return(
         <Grid spacing={2} xs={12} sm={12} md={5} lg={6} xl={6} sx={{mx:5,
             my:{
-                xs:10,
-                sm:10,
-                md:2,
-                lg:2,
+                xs:5,
+                sm:5,
+                md:3,
+                lg:3,
                 xl:3
             },display:"flex",zIndex:2
         }}>
