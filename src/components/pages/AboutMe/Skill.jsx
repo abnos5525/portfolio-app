@@ -1,8 +1,21 @@
-import {Badge, Box, Chip, Divider, LinearProgress, Typography} from "@mui/material";
+import {Badge, Box, Chip, Divider, LinearProgress, Slide, Typography} from "@mui/material";
+import {useEffect, useState} from "react";
 
 const Skill = ({dividerAlign,color,label,value}) =>{
 
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        setLoading(true)
+
+        return() =>{
+            setLoading(false)
+        }
+    }, []);
+
     return(
+        <Slide direction="up" in={loading} style={{
+            transitionDelay: loading ? `100ms` : "0ms"
+        }}>
         <Box sx={{zIndex:2}}>
             <Divider sx={{mt:4}} textAlign={dividerAlign}>
                 <Chip color={color} label={<Typography sx={{fontSize:12,textAlign:"center"}}>{label}</Typography>} sx={{p:3}}
@@ -20,6 +33,8 @@ const Skill = ({dividerAlign,color,label,value}) =>{
                 </Box>
             </Box>
         </Box>
+        </Slide>
+
     )
 }
 

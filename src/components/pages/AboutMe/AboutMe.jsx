@@ -1,11 +1,21 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import {Box, Card, CardContent, Chip, Typography} from "@mui/material";
+import {Box, Card, CardContent, Chip, Slide, Typography} from "@mui/material";
 import {DevInfo} from "../../../constants/DevInfo";
 import Skills from "./Skills";
+import {useEffect, useState} from "react";
 
 const AboutMe = () =>{
 
     const info = DevInfo()
+
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        setLoading(true)
+
+        return() =>{
+            setLoading(false)
+        }
+    }, []);
 
     return(
 
@@ -16,32 +26,38 @@ const AboutMe = () =>{
             }}>
 
                 {info.map((i,index)=>(
-                    <Card key={index} sx={{ bgcolor:"primary.about",mb:1}}>
-                        <Box sx={{display:"flex", flexDirection:"column"}}>
-                            <CardContent>
-                                <Box sx={{display:"flex"}}>
-                                    <Typography sx={{width:"90%"}} variant="h6" color="secondary.main">
-                                        {i.label}
-                                    </Typography>
+                    <Slide direction="up" in={loading} style={{
+                        transitionDelay: loading ? `${index + 1}99ms` : "0ms"
+                    }}>
 
-                                    {i.icon}
-                                </Box>
-                                <Box sx={{display:"flex",mt:3,direction:"rtl",width:"100%"}}>
-                                    <Typography variant="body2" sx={{color:"primary.main"}}>
-                                        {i.describe}
-                                    </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,width:"100%"}}>
-                                    {i.langs.map((l)=>(
-                                        <Chip label={
-                                           <Typography variant="body2" color="primary.light">{l}</Typography>
-                                        } sx={{mr:1,bgcolor:"primary.main"}} size="small"/>
-                                    ))}
-                                </Box>
-                            </CardContent>
-                        </Box>
+                        <Card key={index} sx={{ bgcolor:"primary.about",mb:1}}>
+                            <Box sx={{display:"flex", flexDirection:"column"}}>
+                                <CardContent>
+                                    <Box sx={{display:"flex"}}>
+                                        <Typography sx={{width:"90%"}} variant="h6" color="secondary.main">
+                                            {i.label}
+                                        </Typography>
 
-                    </Card>
+                                        {i.icon}
+                                    </Box>
+                                    <Box sx={{display:"flex",mt:3,direction:"rtl",width:"100%"}}>
+                                        <Typography variant="body2" sx={{color:"primary.main"}}>
+                                            {i.describe}
+                                        </Typography>
+                                    </Box>
+                                    <Box sx={{display:"flex",mt:2,width:"100%"}}>
+                                        {i.langs.map((l)=>(
+                                            <Chip label={
+                                               <Typography variant="body2" color="primary.light">{l}</Typography>
+                                            } sx={{mr:1,bgcolor:"primary.main"}} size="small"/>
+                                        ))}
+                                    </Box>
+                                </CardContent>
+                            </Box>
+
+                        </Card>
+                    </Slide>
+
                 ))}
 
 
