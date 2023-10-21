@@ -47,13 +47,13 @@ const MainPage = () =>{
     }, []);
     return(
             <Box component="div" flexDirection="column" sx={{display:"flex",justifyContent:"center",textAlign:"center",
-                    position:"relative",alignItems:"center",height:"100vh",
+                    position:"relative",alignItems:"center",height:"90vh",
                         top:{
                             xl:5,
                             lg:5,
                             md:-30,
-                            sm:-60,
-                            xs:-60
+                            sm:-80,
+                            xs:-80
                         } }}>
                 <Particle option={links} init={particlesInit} loaded={particlesLoaded}/>
 

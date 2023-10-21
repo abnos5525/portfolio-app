@@ -171,15 +171,15 @@ export const Amoung = () =>{
             groups: {
                 z5000: {
                     number: {
-                        value: 70
+                        value: 20
                     },
                     zIndex: {
-                        value: 5000
+                        value: 100
                     }
                 },
                 z7500: {
                     number: {
-                        value: 30
+                        value: 10
                     },
                     zIndex: {
                         value: 75
@@ -187,7 +187,7 @@ export const Amoung = () =>{
                 },
                 z2500: {
                     number: {
-                        value: 50
+                        value: 20
                     },
                     zIndex: {
                         value: 25
@@ -195,7 +195,7 @@ export const Amoung = () =>{
                 },
                 z1000: {
                     number: {
-                        value: 40
+                        value: 10
                     },
                     zIndex: {
                         value: 10
@@ -203,10 +203,10 @@ export const Amoung = () =>{
                 }
             },
             number: {
-                value: 200,
+                value: 100,
                 density: {
                     enable: false,
-                    value_area: 800
+                    value_area: 300
                 }
             },
             color: {
@@ -231,7 +231,7 @@ export const Amoung = () =>{
                 }
             },
             size: {
-                value: 3
+                value: 2
             },
             links: {
                 enable: false,
