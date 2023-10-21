@@ -12,11 +12,11 @@ const AboutMe = () =>{
         <Grid container sx={{zIndex:2}}>
 
             <Grid xs={12} sm={12} md={5} lg={4} xl={4} sx={{mx:2,
-                mt:6, zIndex:2
+                mt:5, zIndex:2
             }}>
 
                 {info.map((i,index)=>(
-                    <Card key={index} sx={{mb:2, bgcolor:"primary.about"}}>
+                    <Card key={index} sx={{ bgcolor:"primary.about"}}>
                         <Box sx={{display:"flex", flexDirection:"column"}}>
                             <CardContent>
                                 <Box sx={{display:"flex"}}>
